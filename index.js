@@ -16,14 +16,15 @@ document.querySelectorAll('.dropdown-option').forEach(element => {
   })
 });
 
-const contact = document.querySelector('#contact')
+const contact = document.querySelector('#contact-link')
 contact.addEventListener('click', (event)=> {
   event.preventDefault()
   resetMenu()
   resetContact()
   contact.classList.add('contact-active')
+  console.log(contact)
 
-  scrollIntoView(event)
+  scrollIntoView(contact)
 
 })
 
@@ -35,7 +36,7 @@ const resetMenu = () => {
 }
 
 const resetContact = ()=> {
-  const contact = document.querySelector('#contact')
+  const contact = document.querySelector('#contact-link')
   contact.classList.remove('contact-active')
 }
 

@@ -69,7 +69,7 @@ body {
   font-size: clamp(1.1rem, 1.7vw, 1.9rem);
   background: transparent;
   border: none;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(6px);
   transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   padding: 5px 0;
 }
@@ -88,6 +88,7 @@ body {
 
 .dropdown-option {
   display: block;
+  backdrop-filter: blur(6px);
   cursor: pointer;
   color: rgb(209, 209, 209);
   width: 150%;
@@ -125,7 +126,7 @@ body {
 }
 
 .display-area {
-  padding: 3vh 0px;
+  padding: 0vh 0px;
   height: fit-content;
   z-index: 5;
   scrollbar-width: none;
@@ -164,6 +165,9 @@ body {
   max-width: 1300px;
   height: auto;
   object-fit: cover;
+  left: 100%;
+  margin-left: calc(((100vw-1300)/2)+1300);
+  /* margin-left: clamp(-10%, -80%, -1462px); */
   box-shadow: 1px 1px 30px 1px rgba(255, 255, 255, 0.585);
   border-radius: 11px;
 }
