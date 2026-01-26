@@ -1,38 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Showcase</title>
-  <link rel="stylesheet" href="Styles/styles.css" />
-  <script src="general.js" defer></script>
-  <script type="module" src="index.js" defer></script>
-</head>
-<body>
-  <header class="header">
-    <div class="name">Seth Armistead</div>
-    <div class="menu">
-      <svg class="hamburger" viewBox="0 0 100 80" width="34" height="34">
-        <rect width="100" height="6" rx="8"></rect>
-        <rect y="30" width="100" height="6" rx="2"></rect>
-        <rect y="60" width="100" height="6" rx="2"></rect>
-      </svg>
-      <nav class="nav nav-toggle">
-        <a class="menu-item" href="index.html" id="projects">Projects
-            <div class="dropdown-option">Amply</div>
-            <div class="dropdown-option">Cold Knights</div>
-            <div class="dropdown-option">Zoo Project</div>
-            <div class="dropdown-option">Pokemån</div>
-        </a>
-        <a class="menu-item" href="contact.html">Contact</a>
-      </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Styles/styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="general.js" defer></script>
+    <script type="module" src="index.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="name">Seth Armistead</div>
+      <div class="menu">
+        <svg class="hamburger" viewBox="0 0 100 80" width="34" height="34">
+          <rect width="100" height="6" rx="8"></rect>
+          <rect y="30" width="100" height="6" rx="2"></rect>
+          <rect y="60" width="100" height="6" rx="2"></rect>
+        </svg>
+        <nav class="nav nav-toggle">
+          <div class="menu-item" id="projects"
+            >Projects
+              <a href="#amply" class="dropdown-option active-option">Amply</a>
+              <a href="#coldknights" class="dropdown-option">Cold Knights</a>
+              <a href="#pokemonproject" class="dropdown-option">Pokemon API</a>
+              <a href="#zooproject" class="dropdown-option">Zoo Project</a>
+        </div>
+          <a class="menu-item" id='contact-link' href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <div class="background"></div>
+    <div class="display-area">
+      <div class="spacer" id="amply"></div>
+      <div data-aos="fade-up-right" data-aos-anchor-placement="top-center" data-aos-duration="1500" class="project" id="amply-div">
+        <img src="images/Amply.png" id="top-photo" alt="amply" class="background-img" />
+        <div class="project-name">
+          <p class="description" >A streaming service using AWS backend. Hopefully will become a useable platform!  <a class=repo-link href="https://github.com/besethda/Amply">Github Repo→</a></p>
+          <h2 class="title">Amply</h2>
+        </div>
+      </div>
+      <div class="spacer" id="coldknights"></div>
+      <div data-aos="fade-up-right" data-aos-anchor-placement="top-center" data-aos-duration="1500" class="project">
+        <img src="images/Cold_Knights.png" alt="coldknights" class="background-img" />
+        <div class="project-name">
+          <p class="description">A simple game I made using vanilla JS, using free sprites.  <a class=repo-link href="https://github.com/besethda/ColdKnights">Github Repo→</a></p>
+          <h2 class="title">Cold Knights</h2>
+        </div>
+      </div>
+      <div class="spacer" id="pokemonproject"></div>
+      <div data-aos="fade-up-right" data-aos-anchor-placement="top-center" data-aos-duration="1500" class="project">
+        <img src="images/pokemon_project.png" alt="pokemonproject" class="background-img" />
+        <div class="project-name">
+          <p class="description">A group project to explore using API's. You can create a Pokemon team!  <a class=repo-link href="https://github.com/besethda/Pokemon-Project">Github Repo→</a></p>
+          <h2 class="title">Pokemon API</h2>
+        </div>
+      </div>
+      <div class="spacer" id="zooproject"></div>
+      <div data-aos="fade-up-right" data-aos-anchor-placement="top-center" data-aos-duration="1500" class="project">
+        <img src="images/zoo-project.png" alt="zooproject" class="background-img"></img>
+        <div class="project-name">
+          <p class="description">A group project to practice agile methodology. I worked on the About Us, search bar, and styling.  <a class=repo-link href="https://github.com/Callum-Jones230893/Group-zoo-assignment">Github Repo→</a></p>
+          <h2 class="title">Hawksbill Zoo</h2>
+        </div>
+      </div>
+      <div class="spacer" id="contact"></div>
+      <div data-aos="fade-up-right" data-aos-anchor-placement="top-center" data-aos-duration="1500" class="project">
+        <img src="images/zoo-project.png" alt="profile" class="background-img"></img>
+        <div class="project-name">
+          <p class="description">Contact me via <a class=repo-link href="mailto:sdarmistead@gmail.com">my email</a> or <a class=repo-link href="tel:+46 76-130 97 29">my phone number</a></p>
+          <h2 class="title">Seth</h2>
+        </div>
+      </div>
     </div>
-  </header>
-  <div class="display-area">
-    <div class="project">
-      <img src="images/streamer.jpg" alt='Amply' class="background-img" />
-      <div class="project-name">Amply</div>
-    </div>
-  </div>
-</body>
+  </body>
 </html>
