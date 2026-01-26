@@ -7,5 +7,3 @@ new SimpleParallax(image, {
   delay: 0,
   overflow: true
 });
-
-//You can also choose to apply the parallax on multiple images:
