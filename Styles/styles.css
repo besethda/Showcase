@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: 'Sansation', sans-serif;
+  font-family: "Sansation", sans-serif;
   scrollbar-width: none;
 }
 
@@ -32,7 +32,7 @@ body {
   font-size: clamp(1.4rem, 2vw, 2.1rem);
 }
 
-.menu{
+.menu {
   backdrop-filter: blur(3px);
   display: flex;
   flex-direction: column;
@@ -41,11 +41,11 @@ body {
 .hamburger {
   fill: white;
   cursor: pointer;
-  transition: .2s all;
+  transition: 0.2s all;
 }
 
 .hamburger:active {
-  transform: scale(.85);
+  transform: scale(0.85);
 }
 
 .nav {
@@ -53,7 +53,7 @@ body {
   position: absolute;
   top: calc(100% + 12px);
   right: 20px;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   height: fit-content;
   z-index: 10;
 }
@@ -70,20 +70,12 @@ body {
   background: transparent;
   border: none;
   backdrop-filter: blur(6px);
-  transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   padding: 5px 0;
-}
-
-#home-section {
-  padding-top: 14vh;
 }
 
 #contact-link {
   margin-top: 12px;
-}
-
-#portrait {
-  top:10%;
 }
 
 #home-link {
@@ -106,16 +98,16 @@ body {
   width: 150%;
   left: 50%;
   padding: 0;
-  font-size: clamp(.9rem, 1.3vw, 1.5rem);
+  font-size: clamp(0.9rem, 1.3vw, 1.5rem);
   opacity: 0;
   height: 0;
   overflow-y: hidden;
   text-decoration: none;
-  transition: 
-  padding .3s,
-  opacity .3s ease-in-out,
-  transform .4s ease-in-out,
-  height .3s ease-in-out;
+  transition:
+    padding 0.3s,
+    opacity 0.3s ease-in-out,
+    transform 0.4s ease-in-out,
+    height 0.3s ease-in-out;
 }
 
 .active-option {
@@ -131,14 +123,14 @@ body {
   background-size: cover;
 }
 
-#projects:hover .dropdown-option{
-  padding: clamp(18px,1.4vw, 26px) 0px;
+#projects:hover .dropdown-option {
+  padding: clamp(18px, 1.4vw, 26px) 0px;
   height: clamp(23px, 1.8vw, 50px);
   opacity: 1;
 }
 
 .display-area {
-  padding-top: 12vh;
+  padding-bottom: 6vh;
   height: fit-content;
   z-index: 5;
   scrollbar-width: none;
@@ -159,60 +151,60 @@ body {
 }
 
 .project-name {
-  position: relative;
-  right: 34%;
-  bottom: clamp(12%, 35vw, 43%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   white-space: nowrap;
   color: rgb(209, 209, 209);
   font-size: clamp(1rem, 2vw, 2rem);
 }
 
 .title {
-  position: absolute;
-  bottom: -2vw;
+  margin: 0;
 }
 
 .background-img {
-  position: absolute;
-  width: 55%;
+  width: 70%;
   max-width: 1300px;
   height: auto;
+  margin-left: 10%;
   object-fit: cover;
-  left: 100%;
-  /* margin-left: calc(((100vw-1300)/2)+1300); */
-  margin-left: -77%;
   box-shadow: 1px 1px 30px 1px rgba(255, 255, 255, 0.585);
   border-radius: 11px;
 }
 
 .portrait-img {
-  left: 100%;
-  top: 10%;
-  margin-left: -46%;
-  position: absolute;
   box-shadow: 1px 1px 30px 1px rgba(255, 255, 255, 0.585);
   width: auto;
   height: 60%;
 }
 
 .description {
-  position: absolute;
   color: rgb(209, 209, 209);
-  font-size: clamp(.9rem, 1.7vw, 1.7rem);
+  font-size: clamp(0.9rem, 1.7vw, 1.7rem);
+  text-align: center;
   white-space: wrap;
-  top: 0px;
-  left: -50px;
   z-index: 2000;
   opacity: 1;
   width: 100vw;
 }
 
-.portrait-description {
-  width: 30vw;
+.public-repos {
+  display: flex;
+  flex-direction: column;
 }
 
-#top-photo {
-  margin-top: 140px;
+.repo {
+  text-decoration: underline;
+  color: white;
+}
+
+.portrait-description {
+  width: 70%;
 }
 
 .repo-link {
@@ -220,71 +212,33 @@ body {
 }
 
 @media (max-width: 600px) {
-
   .header {
     padding: 12px 18px;
   }
 
   .display-area {
-    padding: 0vh 0px;
+    padding-top: 80vh 0px;
   }
 
   .spacer {
     height: 0vh;
   }
 
-  .project {
-    height: 99vh;
-  }
-
-  #home-section {
-    padding-top: 3vh;
+  .menu-item {
+    backdrop-filter: blur(100px);
   }
 
   .background-img {
     width: 95%;
-    left: 100%;
-    margin-left: -92%;
+    margin-left: 12%;
   }
 
   .portrait-img {
-    width: 43%;
-    height: auto;
-    position: absolute;
-    right: 0%;
-    left: 74%;
-    top: 48%;
+    height: 35%;
+    width: auto;
   }
 
   .description {
-    top: 0px;
     width: 80vw;
-    margin-left: 10vw;
-  }
-
-  .portrait-description {
-    position: absolute;
-    top: 20%;
-  }
-
-  #portrait {
-    top: 54%;
-  }
-
-  .project-name {
-    bottom: 20%;
   }
 }
-
-@media (width < 1500px) and (width > 600){
-  .project-name {
-    bottom: 500px;
-  }
-}
-
-@media (min-width: 2000px) {
-  .background-img {
-    margin-left: -81vw;
-  }
-}
-

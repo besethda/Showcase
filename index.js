@@ -1,3 +1,5 @@
+import { Octokit } from "https://esm.sh/octokit"
+
 let image = document.getElementsByClassName('background-img')
 new simpleParallax(image, {
   orientation: "right",
@@ -5,6 +7,37 @@ new simpleParallax(image, {
   delay: 1,
   overflow: true
 })
+
+const getProjects = async () => {
+  const octokit = new Octokit({
+    // auth: ''
+  })
+  try {
+    let response = await octokit.request('GET /user/repos', {
+      headers: {
+        'X-GitHub-Api-Version': '2022-11-28'
+      }
+    })
+    return response
+    
+  } catch (error) {
+    
+  }
+
+}
+
+const printProjects = async () => {
+  let publicRepos = await getProjects()
+  console.log(publicRepos)
+  const publicReposElement = document.querySelector('.public-repos')
+  publicRepos.data.forEach(repo => {
+    let currentRepo = document.createElement('a')
+    currentRepo.setAttribute("href", `${repo.html_url}`)
+    currentRepo.classList.add("repo")
+    currentRepo.textContent = `${repo.name}`
+    publicReposElement.appendChild(currentRepo)
+    });
+}
 
 document.querySelectorAll('.dropdown-option').forEach(element => {
   element.addEventListener('click', (event)=> {
@@ -86,3 +119,4 @@ const addAnimation = () => {
 }
 
 addAnimation()
+printProjects()
