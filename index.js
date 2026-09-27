@@ -96,19 +96,12 @@ const scrollIntoView = (element) => {
 
 const addAnimation = () => {
   const projects = document.querySelectorAll('.project')
-  if(window.innerWidth < 600) {
-    projects.forEach(element => {
-      element.setAttribute('data-aos', 'fade-up-right')
-      element.setAttribute('data-aos-anchor-placement', 'bottom-center')
-      element.setAttribute('data-aos-duration', '1500')
-    });
-  } else {
-    projects.forEach(element => {
-      element.setAttribute('data-aos', 'fade-up-right')
-      element.setAttribute('data-aos-anchor-placement', 'top-center')
-      element.setAttribute('data-aos-duration', '1500')
-    });
-  }
+  projects.forEach(element => {
+    element.setAttribute('data-aos', 'fade-up-right')
+    element.setAttribute('data-aos-anchor-placement', 'top-center')
+    element.setAttribute('data-aos-duration', '1500')
+  });
+  AOS.refreshHard()
 }
 
 addAnimation()
