@@ -1,10 +1,12 @@
 let image = document.getElementsByClassName('background-img')
-new simpleParallax(image, {
-  orientation: "right",
-  scale: 2.1,
-  delay: 1,
-  overflow: true
-})
+if (window.innerWidth >= 600) {
+  new simpleParallax(image, {
+    orientation: "right",
+    scale: 2.1,
+    delay: 1,
+    overflow: true
+  })
+}
 
 const featuredRepos = ['amply.stream', 'scouterna', 'Ashion', 'space', 'Whats_in_the_water', 'aquarium-assignment', 'ColdKnights', 'Showcase']
 
