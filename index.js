@@ -94,20 +94,17 @@ const scrollIntoView = (element) => {
 
 const addAnimation = () => {
   const projects = document.querySelectorAll('.project')
-  const htmlElement = document.querySelector('html')
   if(window.innerWidth < 600) {
     projects.forEach(element => {
       element.setAttribute('data-aos', 'fade-up-right')
       element.setAttribute('data-aos-anchor-placement', 'bottom-center')
       element.setAttribute('data-aos-duration', '1500')
-      htmlElement.style.overflowY = 'scroll'
     });
   } else {
     projects.forEach(element => {
       element.setAttribute('data-aos', 'fade-up-right')
       element.setAttribute('data-aos-anchor-placement', 'top-center')
       element.setAttribute('data-aos-duration', '1500')
-      htmlElement.style.overflowY = 'hidden'
     });
   }
 }

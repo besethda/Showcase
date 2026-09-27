@@ -6,11 +6,12 @@
 
 html {
   overflow-x: hidden;
+  scrollbar-width: none;
 }
 
 body {
   width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 0;
 }
 
