@@ -168,6 +168,12 @@ body {
   margin: 0;
 }
 
+.project-link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .background-img {
   width: 70%;
   max-width: 1300px;
