@@ -235,6 +235,10 @@ body {
     backdrop-filter: blur(100px);
   }
 
+  #projects {
+    display: none;
+  }
+
   .background-img {
     width: 95%;
     margin-left: 0;
